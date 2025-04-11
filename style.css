@@ -39,6 +39,18 @@ nav {
   height: 17vh;
 }
 
+.nav__buttons i,
+.theme-mobile i {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.nav__buttons i:hover,
+.theme-mobile i:hover {
+  color: var(--hover-color);
+}
+
 .nav-links {
   gap: 2rem;
   list-style: none;
@@ -92,6 +104,7 @@ a:hover {
   background-color: black;
   transition: all 0.3 ease-in-out;
 }
+
 
 .menu-links {
   position: absolute;
@@ -169,8 +182,6 @@ section {
   height: 80vh;
 }
 
-
-
 .section__pic-container {
   display: flex;
   height: 200px; /* Adjust the size for responsiveness */
@@ -201,8 +212,6 @@ section {
   }
 }
 
-
-
 .section__pic-container img:hover {
   transform: scale(1.05);
   transition: all 300ms ease;
@@ -210,8 +219,6 @@ section {
 .section__pic-container img:active {
   transform: scale(0.95);
 }
-
-
 
 .section__text {
   align-self: center;
@@ -466,4 +473,54 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme a {
+  color: #ffffff;
+}
+
+.dark-theme .btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-theme .icon {
+  filter: invert(1);
+}
+
+/* Fix for experience section titles, text, and icons in dark mode */
+.dark-theme .experience-sub-title {
+  color: #000000; /* Ensure titles are dark and visible on a white background */
+}
+
+.dark-theme .article-container article h3,
+.dark-theme .article-container article p {
+  color: #000000; /* Ensure text is dark and visible */
+}
+
+.dark-theme .details-container {
+  background-color: #ffffff; /* White background for the details container */
+  color: #000000; /* Dark text for visibility */
+  border-color: #cccccc; /* Light gray border for contrast */
+}
+
+.dark-theme .details-container h2,
+.dark-theme .details-container h3,
+.dark-theme .details-container p {
+  color: #000000; /* Ensure all text inside details-container is dark */
+}
+
+.dark-theme .article-container article .icon {
+  filter: none; /* Keep icons in their original color */
+}
+
+.dark-theme .section__pic-container img {
+  filter: grayscale(100%) brightness(0.7); /* Apply grayscale and reduce brightness */
+  transition: all 0.3s ease; /* Smooth transition when toggling themes */
 }
