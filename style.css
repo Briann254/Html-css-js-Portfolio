@@ -171,9 +171,17 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  height: 200px; /* Adjust the size for responsiveness */
+  width: 200px;  /* Adjust the size for responsiveness */
+  margin: auto;
+  border-radius: 50%; /* Makes the container circular */
+  overflow: hidden; /* Hides any overflow (extra image parts outside the circle) */
+}
+
+.section__pic-container img {
+  height: 100%; /* Ensures the image takes up the full container height */
+  width: 100%;  /* Ensures the image takes up the full container width */
+  object-fit: cover; /* Ensures the image covers the circular container without distortion */
 }
 
 .section__text {
