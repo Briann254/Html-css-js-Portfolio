@@ -169,6 +169,8 @@ section {
   height: 80vh;
 }
 
+
+
 .section__pic-container {
   display: flex;
   height: 200px; /* Adjust the size for responsiveness */
@@ -182,7 +184,34 @@ section {
   height: 100%; /* Ensures the image takes up the full container height */
   width: 100%;  /* Ensures the image takes up the full container width */
   object-fit: cover; /* Ensures the image covers the circular container without distortion */
+  border-radius: 50%; /* Makes the image circular */
 }
+
+@media (max-width: 768px) {
+  .section__pic-container img {
+    height: 180px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__pic-container {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+
+
+.section__pic-container img:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease;
+}
+.section__pic-container img:active {
+  transform: scale(0.95);
+}
+
+
 
 .section__text {
   align-self: center;
